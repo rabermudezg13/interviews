@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Talent Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Talent Management</h1>
+        
+        <div class="buttons-container">
+            <button onclick="showForm()" class="nav-btn">Add Talent</button>
+            <button onclick="showSearch()" class="nav-btn">Search Talent</button>
+            <button onclick="showDataframe()" class="nav-btn">View All Data</button>
+        </div>
+
+        <div id="formSection" class="form-section">
+            <h2>Add New Talent</h2>
+            <form id="talentForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="id">ID:</label>
+                    <input type="text" id="id" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="visitDate">Visit Date:</label>
+                    <input type="date" id="visitDate" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="pendingSteps">Pending Steps:</label>
+                    <textarea id="pendingSteps" required></textarea>
+                </div>
+
+                <button type="submit">Add Talent</button>
+            </form>
+        </div>
+
+        <div id="searchSection" class="query-section" style="display: none;">
+            <h2>Search Talents</h2>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Search by name or ID...">
+                <button onclick="searchTalents()">Search</button>
+            </div>
+            <div id="results"></div>
+        </div>
+
+        <div id="dataframeSection" class="dataframe-section" style="display: none;">
+            <h2>All Talents</h2>
+            <div class="table-container">
+                <table id="dataframeTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>ID</th>
+                            <th>Phone</th>
+                            <th>Email</th>
+                            <th>Visit Date</th>
+                            <th>Pending Steps</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="dataframeBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
