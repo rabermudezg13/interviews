@@ -1,0 +1,70 @@
+/* ... (estilos anteriores) ... */
+
+.buttons-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.nav-btn {
+    flex: 1;
+    background-color: #2196F3;
+}
+
+.nav-btn:hover {
+    background-color: #1976D2;
+}
+
+.dataframe-section {
+    margin-top: 20px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+.delete-btn {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .buttons-container {
+        flex-direction: column;
+    }
+    
+    .table-container {
+        font-size: 14px;
+    }
+    
+    th, td {
+        padding: 8px;
+    }
+}
